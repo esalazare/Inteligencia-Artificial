@@ -1,11 +1,14 @@
 Actividad de aprendizaje — 3.1 Lógica proposicional y lógica de primer orden
 Unidad 3. Representación del conocimiento y razonamiento
+
 Nombre de la actividad
 Modelado lógico de un dominio y derivación de conocimiento
+
 Propósito
 Aplicar lógica proposicional y lógica de primer orden para representar conocimiento de un dominio acotado, distinguiendo hechos, relaciones, reglas y conclusiones derivadas.
 La actividad busca que el estudiante comprenda que la lógica en Inteligencia Artificial no se utiliza únicamente para verificar fórmulas, sino como un lenguaje formal para construir bases de conocimiento sobre las cuales posteriormente pueden realizarse procesos de inferencia.
-________________________________________
+
+
 Situación de trabajo
 Se utilizará como dominio principal una pequeña red informática.
 Considere los siguientes elementos:
@@ -17,7 +20,8 @@ e) Router1 está operativo
 f) Router2 no está operativo
 g) Todo equipo conectado a un router operativo tiene acceso a la red
 h) Todo equipo con acceso a la red puede utilizar los servicios institucionales
-________________________________________
+
+
 Instrucciones
 Parte 1. Identificación del conocimiento
 Clasifique la información del dominio en:
@@ -63,14 +67,18 @@ Si un equipo tiene acceso a la red, entonces puede utilizar los servicios instit
 Estas reglas son importantes porque permiten obtener conocimiento que no se encuentra almacenado directamente como un hecho.
 
 Presente una explicación breve de cada categoría e indique por qué cada elemento pertenece a ella.
-________________________________________
+
 Parte 2. Representación mediante lógica proposicional
 Seleccione al menos seis afirmaciones del dominio y represéntelas mediante proposiciones.
 Ejemplo:
+
 [ R1 = ext{Router1 está operativo} ]
+
 Posteriormente formule al menos dos reglas proposicionales utilizando conectores lógicos.
 Ejemplo:
+
 [ (C1 \land R1) ightarrow A1 ]
+
 Explique con lenguaje natural qué representa cada fórmula:
 En lógica proposicional cada afirmación completa se representa mediante un símbolo que puede ser verdadero o falso.
 Se pueden definir las siguientes proposiciones:
@@ -116,7 +124,7 @@ La principal característica de esta representación es que cada equipo requiere
 Por ejemplo, para tres equipos tenemos que definir A1, A2 y A3.
 Esto funciona correctamente para un dominio pequeño, pero se vuelve poco práctico cuando aumenta considerablemente el número de equipos.
 
-________________________________________
+
 Parte 3. Representación mediante lógica de primer orden
 Reformule el dominio utilizando:
 a) Constantes
@@ -193,7 +201,7 @@ y:
 Ejemplo de regla:
 [ orall x orall r ((Equipo(x) \land Router(r) \land Conectado(x,r) \land Operativo(r))
 ightarrow TieneAcceso(x)) ]
-________________________________________
+
 
 Parte 4. Derivación de conocimiento
 A partir de los hechos y reglas definidos, determine qué conclusiones pueden derivarse.
@@ -294,7 +302,7 @@ PC2 tiene acceso	PC2 conectado a Router1 + Router1 operativo	Regla de acceso	Tie
 PC3 tiene acceso	PC3 conectado a Router2 + Router2 no operativo	La regla no puede activarse	No se deriva TieneAcceso(PC3)
 Existe equipo conectado a router no operativo	PC3 conectado a Router2 + Router2 no operativo	Cuantificador existencial	La existencia queda demostrada
 
-________________________________________
+
 Parte 5. Comparación entre representaciones
 Explique brevemente:
 a) Qué información resultó más sencilla de representar con lógica proposicional
@@ -322,7 +330,7 @@ Además:
 ∀x∀r ((Equipo(x) ∧ Router(r) ∧ Conectado(x,r) ∧ Operativo(r)) → TieneAcceso(x))
 permite expresar una regla general aplicable a cualquier equipo y cualquier router.
 Esto evita crear una regla independiente para cada equipo.
-________________________________________
+
 
 c) Qué problemas aparecerían si el dominio tuviera 1,000 equipos y 100 routers
 En lógica proposicional el número de proposiciones y reglas aumentaría considerablemente.
@@ -354,7 +362,7 @@ Por lo tanto, la misma regla puede utilizarse cuando se agreguen:
 •	Router100.
 Esta capacidad de generalización constituye una de las principales ventajas de la lógica de primer orden frente a la lógica proposicional.
 
-________________________________________
+
 Parte 6. Extensión del dominio
 Incorpore al menos dos nuevos elementos al dominio.
 Puede agregar, por ejemplo:
@@ -384,7 +392,8 @@ Accede(Usuario1, Servidor1)
 significa:
 Usuario1 accede a Servidor1.
 Esta relación permite conectar objetos de diferentes tipos dentro del dominio.
-________________________________________
+
+
 Nueva regla de primer orden
 Podemos establecer la siguiente regla:
 Todo usuario que pueda acceder a un equipo con acceso a la red puede utilizar los servicios institucionales.
@@ -404,7 +413,7 @@ entonces, mediante la regla anterior, podemos concluir:
 PuedeUsarServicio(Usuario1)
 Esto demuestra cómo una base de conocimiento puede ampliarse incorporando nuevos objetos, relaciones y reglas sin tener que modificar las reglas existentes.
 
-________________________________________
+
 Producto a entregar
 El estudiante deberá entregar un documento breve o archivo Markdown que incluya:
 a) Descripción del dominio
@@ -416,7 +425,8 @@ f) Comparación entre ambos tipos de lógica
 g) Extensión propuesta
 h) Reflexión final
 Extensión sugerida: 3 a 5 páginas, sin considerar portada ni referencias.
-________________________________________
+
+
 Evidencia de aprendizaje esperada
 Al finalizar la actividad, el estudiante deberá ser capaz de:
 a) Traducir conocimiento expresado en lenguaje natural a representaciones lógicas
@@ -424,7 +434,7 @@ b) Distinguir entre proposiciones, predicados, objetos, relaciones y cuantificad
 c) Formular reglas generales mediante lógica de primer orden
 d) Derivar conclusiones a partir de hechos y reglas
 e) Analizar las ventajas y limitaciones de diferentes formas de representación lógica
-________________________________________
+
 Criterios de evaluación
 Criterio	Descripción	Ponderación
 Identificación del conocimiento	Distingue correctamente objetos, propiedades, relaciones y reglas	15 %
@@ -434,7 +444,7 @@ Derivación de conclusiones	Justifica correctamente las conclusiones obtenidas	2
 Comparación y reflexión	Analiza diferencias, ventajas y limitaciones de ambas representaciones	10 %
 Presentación	Entrega clara, organizada y con notación consistente	5 %
 Total: 100 %
-________________________________________
+
 Preguntas de reflexión final
 Responda brevemente:
 a) ¿Qué diferencia existe entre almacenar un hecho y representar conocimiento?
