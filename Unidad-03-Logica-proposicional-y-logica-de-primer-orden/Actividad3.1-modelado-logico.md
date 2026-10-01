@@ -205,4 +205,4 @@ En 3.2 Redes semánticas, marcos y ontologías (OWL) se estudiarán otras formas
 
 En 3.3 Sistemas de inferencia: hacia adelante y hacia atrás se profundizará en los mecanismos que permiten obtener automáticamente conclusiones a partir de una base de conocimiento.
 
-← Volver al contenido del subtema 3.1
+
