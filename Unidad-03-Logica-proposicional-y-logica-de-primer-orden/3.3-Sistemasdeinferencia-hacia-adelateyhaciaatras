@@ -1,1 +1,36 @@
 
+hechos_iniciales = {
+    "equipo_no_enciende",
+    "led_apagado",
+    "bateria_descargada"
+}
+
+reglas = [
+    {
+        "nombre": "R1",
+        "condiciones": {
+            "equipo_no_enciende",
+            "led_apagado"
+        },
+        "conclusion": "revisar_alimentacion"
+    },
+    {
+        "nombre": "R2",
+        "condiciones": {
+            "revisar_alimentacion",
+            "bateria_descargada"
+        },
+        "conclusion": "posible_falla_bateria"
+    },
+    {
+        "nombre": "R3",
+        "condiciones": {
+            "posible_falla_bateria"
+        },
+        "conclusion": "recomendar_revision_bateria"
+    }
+]
+
+print("Hechos iniciales:")
+for h in sorted(hechos_iniciales):
+    print("-", h)
